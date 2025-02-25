@@ -2,8 +2,11 @@
 #Foo(abc)
 
 Employee {
-	id : int {@Id  @NotNull #HTMLTYPE(Text)}; // the id
-	firstName : string { @SizeMax(40)  #HTMLTYPE(Password)} ;
-	birthDate : date { @Past #HTMLTYPE(button)} ;
-	country : Country { @Embedded #HTMLTYPE(number)} ;
+	id : int {@Id  @NotNull #HTMLTYPE(Text)  @Label("Employee Id")}; 
+	firstName : string { @SizeMax(40)  #HTMLTYPE(Text) @Label("First Name")} ;
+	lasttName : string { @SizeMax(40)  #HTMLTYPE(Text) @Label("Last Name")} ;
+	address : string { @SizeMax(40)  #HTMLTYPE(Text) @Label("Address")} ;
+	email : string { @SizeMax(40)  #HTMLTYPE(Email) @Label("Email Id")} ;
+	birthDate : date { @Past #HTMLTYPE(button) @Label("Birth Date")} ;
+	country : string { #HTMLTYPE(number) @Label("Country")} ;
 }
