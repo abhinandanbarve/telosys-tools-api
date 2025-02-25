@@ -58,10 +58,10 @@ public class GenerationTest {
 		
 //		TestsEnv.copyDbModelFile(projectFolderFullPath, "bookstore.dbrep");
 		TestsEnv.copyDslModelFiles(projectFolderFullPath, "employees");
-		TestsEnv.copyDslModelFiles(projectFolderFullPath, "cars-and-drivers");
+		//TestsEnv.copyDslModelFiles(projectFolderFullPath, "cars-and-drivers");
 //		TestsEnv.copyDslModelFiles(projectFolderFullPath, "employees_invalid");
 //		TestsEnv.copyTemplatesFiles(projectFolderFullPath, "basic-templates-TT210");
-		TestsEnv.copyTemplatesFiles(projectFolderFullPath, TEST_BUNDLE1 );
+		TestsEnv.copyTemplatesFiles(projectFolderFullPath, "test-bootstrap" );
 		
 		return telosysProject ;
 	}
@@ -80,13 +80,13 @@ public class GenerationTest {
 //		Model model = genericModelLoader.loadModel("cars-and-drivers.model");
 //		Model model = TestUtils.loadModelWithGenericModelLoader("cars-and-drivers.model", telosysToolsCfg);
 //		Model model = TestUtils.loadModelWithGenericModelLoader("cars-and-drivers", telosysToolsCfg);
-		Model model = TestUtils.loadModel(telosysProject, "cars-and-drivers");
+		Model model = TestUtils.loadModel(telosysProject, "employees");
 
 		assertNotNull(model);
 		//assertNull(genericModelLoader.getErrorMessage());
 		System.out.println("Model loaded. Model name = " + model.getName() );
 
-		String bundleName = TEST_BUNDLE1 ;
+		String bundleName = "test-bootstrap" ;
 		System.out.println(" --- Launch code generation for bundle '" + bundleName  + "' ..." );
 		GenerationTaskResult result = telosysProject.launchGeneration(model, bundleName, true);
 		

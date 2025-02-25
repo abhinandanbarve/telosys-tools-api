@@ -2,8 +2,8 @@
 #Foo(abc)
 
 Employee {
-	id : int {@Id  @NotNull}; // the id
-	firstName : string { @SizeMax(40) } ;
-	birthDate : date { @Past } ;
-	country : Country { @Embedded } ;
+	id : int {@Id  @NotNull #HTMLTYPE(Text)}; // the id
+	firstName : string { @SizeMax(40)  #HTMLTYPE(Password)} ;
+	birthDate : date { @Past #HTMLTYPE(button)} ;
+	country : Country { @Embedded #HTMLTYPE(number)} ;
 }
