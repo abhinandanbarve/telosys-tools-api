@@ -8,5 +8,7 @@ Employee {
 	address : string { @SizeMax(40)  #HTMLTYPE(Text) @Label("Address")} ;
 	email : string { @SizeMax(40)  #HTMLTYPE(Email) @Label("Email Id")} ;
 	birthDate : date { @Past #HTMLTYPE(button) @Label("Birth Date")} ;
-	country : string { #HTMLTYPE(number) @Label("Country")} ;
+	age : string { #HTMLTYPE(number) @Label("Age")} ;
+	salary : string { #HTMLTYPE(number) @Label("Salary")} ;
+	gender : string { @SizeMax(40)  #HTMLTYPE(Text) @Label("Gender")} ;
 }
